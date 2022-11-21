@@ -1,18 +1,20 @@
-#!/usr/bin/env groovy
 pipeline {
-    agent { any }
-    environment {
-        TEST_PREFIX = "HelloWorld!!"
-    }
-    stages {
-        stage("Hello World!!") {
-            steps {
-                echo $TEST_PREFIX
+    agent any
+    
+    stages{
+        steps{
+            echo "Building the aplication"
+            }
+        }
+        steps("test"){
+            steps{
+                echo "Testing the application"
+            }
+        }
+        steps("deploy"){
+            steps{
+                echo "Deploy the application"
             }
         }
     }
 }
-
-
-declarate pipeline
-scripted pipeline
