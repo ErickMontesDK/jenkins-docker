@@ -10,7 +10,8 @@ pipeline {
         }
         stage("test"){
             steps{
-                 sh './helloWorld.sh'
+                sh 'chmod +x helloWorld.sh'
+                sh './helloWorld.sh'
             }
         }
         stage("deploy"){
