@@ -10,7 +10,7 @@ pipeline {
         }
         stage("test"){
             steps{
-                echo 'Testing the application'
+                sh ./HelloWorld.sh
             }
         }
         stage("deploy"){
